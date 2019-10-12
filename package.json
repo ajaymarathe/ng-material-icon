@@ -1,0 +1,47 @@
+{
+  "name": "ng-material-icon",
+  "version": "1.0.0",
+  "peerDependencies": {
+    "@angular/common": "^8.2.9",
+    "@angular/core": "^8.2.9"
+  },
+  "main": "bundles/ng-material-icon.umd.js",
+  "module": "fesm5/ng-material-icon.js",
+  "es2015": "fesm2015/ng-material-icon.js",
+  "esm5": "esm5/ng-material-icon.js",
+  "esm2015": "esm2015/ng-material-icon.js",
+  "fesm5": "fesm5/ng-material-icon.js",
+  "fesm2015": "fesm2015/ng-material-icon.js",
+  "typings": "ng-material-icon.d.ts",
+  "metadata": "ng-material-icon.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  },
+  "description": "🍺 Hi there, material icons for Angular Lovers &lt;3, Thanks...",
+  "author": "ajay marathe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajaymarathe/angular-material-icon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ajaymarathe/angular-material-icon/issues"
+  },
+  "homepage": "https://github.com/ajaymarathe/angular-material-icon#readme",
+  "keywords": [
+    "angular-materials-icon",
+    "angular-material-icon",
+    "ng-material-icon",
+    "md-angular",
+    "md-angular-icon",
+    "angular",
+    "angular-icon",
+    "material-angular-icon",
+    "material-design",
+    "icon-angular-material",
+    "angular-component-icon",
+    "material-icons",
+    "material-design-icons-angular"
+  ]
+}

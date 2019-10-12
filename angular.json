@@ -1,0 +1,164 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ng-material-icon": {
+      "projectType": "library",
+      "root": "projects/ng-material-icon",
+      "sourceRoot": "projects/ng-material-icon/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-material-icon/tsconfig.lib.json",
+            "project": "projects/ng-material-icon/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-material-icon/src/test.ts",
+            "tsConfig": "projects/ng-material-icon/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-material-icon/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-material-icon/tsconfig.lib.json",
+              "projects/ng-material-icon/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "icon": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/icon",
+      "sourceRoot": "projects/icon/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/icon",
+            "index": "projects/icon/src/index.html",
+            "main": "projects/icon/src/main.ts",
+            "polyfills": "projects/icon/src/polyfills.ts",
+            "tsConfig": "projects/icon/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/icon/src/favicon.ico",
+              "projects/icon/src/assets"
+            ],
+            "styles": [
+              "projects/icon/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/icon/src/environments/environment.ts",
+                  "with": "projects/icon/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "icon:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "icon:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "icon:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/icon/src/test.ts",
+            "polyfills": "projects/icon/src/polyfills.ts",
+            "tsConfig": "projects/icon/tsconfig.spec.json",
+            "karmaConfig": "projects/icon/karma.conf.js",
+            "assets": [
+              "projects/icon/src/favicon.ico",
+              "projects/icon/src/assets"
+            ],
+            "styles": [
+              "projects/icon/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/icon/tsconfig.app.json",
+              "projects/icon/tsconfig.spec.json",
+              "projects/icon/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/icon/e2e/protractor.conf.js",
+            "devServerTarget": "icon:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "icon:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "ng-material-icon"
+}
