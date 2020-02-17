@@ -8,9 +8,9 @@
 ## Installation
 Using NPM:
 ```html
-npm i ng-material-icon
+npm i ng-material-icon --save
 
-npm i material-icons
+npm i material-icons --save
 ```
 In you `angular.json` import material-icon
 ```js
