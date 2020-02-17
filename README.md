@@ -1,7 +1,9 @@
-# NgMaterialIcon
-🍺 Hi there, Material icons for Angular lovers &lt;3
+# Ng Material Icon
+🍺 Materail Icons for Angular Lovers. Coded by [Bootcatch](http://bootcatch.com).
 
-[![NPM](https://img.shields.io/npm/v/ng-material-icon.svg)](https://www.npmjs.com/package/ng-material-icon)  [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/ng-material-icon.svg)](https://www.npmjs.com/package/ng-material-icon)
+[![NPM](https://img.shields.io/npm/dt/ng-material-icon.svg)](https://www.npmjs.com/package/ng-material-icon) 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Installation
 Using NPM:
