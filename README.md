@@ -12,16 +12,16 @@ npm i ng-material-icon --save
 
 npm i material-icons --save
 ```
-In you `angular.json` import material-icon
+In you `angular.json` Add Material icon css.
 ```js
 "styles": [
     // "src/styles.scss",
     "./node_modules/material-icons/iconfont/material-icons.css"
 ],
 ```
-Or
+**Or**
 
-In your `styles.scss` file import font-awesome css
+In your `styles.scss` file Import Material icon css
 ```js
 /* You can add global styles to this file, and also import other style files */
 @import "material-icons/iconfont/material-icons.css";
@@ -58,11 +58,11 @@ Then use wherever you want !! Goodluck:
 
 ## Note
 
-- add only name to icon, e.g `icon="check_circle"`
+- *Add only name to icon, e.g `icon="check_circle"`*
 
-- **icon** - font-awesome icon name will find here [material icons](https://material.io/resources/icons/?style=baseline)
-- **size** - icon size in `rem`.
-- **color** - you can give any valid value `e.g red, yellow, #fffff, #ff0000.`
+- ***icon** - Material Icon names will find here [material icons](https://material.io/resources/icons/?style=baseline)*
+- ***size** - Icon size in `rem`.*
+- ***color** - You can give any valid value `e.g red, yellow, #fffff, #ff0000.`*
 
 ## Author
 
